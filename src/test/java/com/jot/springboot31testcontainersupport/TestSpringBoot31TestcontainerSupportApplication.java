@@ -13,13 +13,13 @@ public class TestSpringBoot31TestcontainerSupportApplication {
 	@Bean
 	@ServiceConnection
 	MongoDBContainer mongoDbContainer() {
-		return new MongoDBContainer("mongo:latest");
+		return new MongoDBContainer("mongo:latest").withReuse(true);
 	}
 
 	@Bean
 	@ServiceConnection(name = "redis")
 	GenericContainer<?> redisContainer() {
-		return new GenericContainer<>("redis:latest").withExposedPorts(6379);
+		return new GenericContainer<>("redis:latest").withExposedPorts(6379).withReuse(true);
 	}
 
 	public static void main(String[] args) {
