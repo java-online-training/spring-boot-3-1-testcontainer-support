@@ -16,12 +16,6 @@ public class TestSpringBoot31TestcontainerSupportApplication {
 		return new MongoDBContainer("mongo:latest").withReuse(true);
 	}
 
-	@Bean
-	@ServiceConnection(name = "redis")
-	GenericContainer<?> redisContainer() {
-		return new GenericContainer<>("redis:latest").withExposedPorts(6379).withReuse(true);
-	}
-
 	public static void main(String[] args) {
 		SpringApplication.from(SpringBoot31TestcontainerSupportApplication::main).with(TestSpringBoot31TestcontainerSupportApplication.class).run(args);
 	}
