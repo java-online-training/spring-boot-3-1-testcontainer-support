@@ -19,8 +19,8 @@ public class SpringBoot31TestcontainerSupportApplication {
 		return args -> {
 			bookRepo.deleteAll();
 			bookRepo.insert(new Book(1,"Lord Of the Rings", "J.R.R. Tolkien"));
-			bookRepo.insert(new Book(2,"Lord of Flies", "J.R.R. Tolkien"));
-			bookRepo.insert(new Book(3,"1984", "J.R.R. Tolkien"));
+			bookRepo.insert(new Book(2,"Lord of Flies", "William Golding"));
+			bookRepo.insert(new Book(3,"1984", "George Orwell"));
 		};
 	}
 }
