@@ -16,7 +16,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 class SpringBoot31TestcontainerSupportApplicationTests {
 
 	@LocalServerPort
-    int randomServerPort;
+        private int randomServerPort;
 
 	@ServiceConnection
 	@Container
